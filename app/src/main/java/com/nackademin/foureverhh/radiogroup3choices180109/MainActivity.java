@@ -1,5 +1,6 @@
 package com.nackademin.foureverhh.radiogroup3choices180109;
 
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     {
         TextView txv =(TextView)findViewById(R.id.txv);
         RadioGroup ticketType =(RadioGroup)findViewById(R.id.ticketType);
-
+        RadioGroup ticketAmount =(RadioGroup)findViewById(R.id.ticketAmount);
         /*
         switch (ticketType.getCheckedRadioButtonId())
         {
@@ -35,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         */
+        int amount = ticketAmount.getCheckedRadioButtonId();
+        RadioButton selectedAmount = (RadioButton)findViewById(amount);
         int id=ticketType.getCheckedRadioButtonId();
         RadioButton select =(RadioButton)findViewById(id);
-        txv.setText("Buy "+select.getText());
+        txv.setText("Buy "+select.getText()+" and "+selectedAmount.getText());
     }
 }

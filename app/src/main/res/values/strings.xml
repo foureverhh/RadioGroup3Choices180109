@@ -4,4 +4,8 @@
     <string name="adult">adult ticket</string>
     <string name="child">child ticket</string>
     <string name="elder">elder ticket</string>
+    <string name="one">one ticket</string>
+    <string name="two">two tickets</string>
+    <string name="three">Three tickets</string>
+    <string name="four">Four tickets</string>
 </resources>
